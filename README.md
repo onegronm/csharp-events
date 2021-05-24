@@ -9,5 +9,3 @@ Act as pipeline between events and event handlers. A "function pointer". Moves d
 ### Event Handlers
 Receive and process EventArg data
 
-![image](https://user-images.githubusercontent.com/5638902/119406307-9b421f80-bcb0-11eb-8911-229c633debeb.png)
-
