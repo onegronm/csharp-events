@@ -15,9 +15,15 @@
 
 
 ## Events
-Provide notifications and send data through EventArgs
+- Provide notifications and send data through EventArgs
+- Uses a delegate to route itself to an event listener
+- Events are declared in a class using the `event` keyword
+- Think of it as a wrapper for a delegate
+### Uses
 
 ## Event Handlers
 - Methods invoked through delegates
-- Receive and process EventArg data
+- Receive and process EventArgs data
+- Standard way in .NET to send events and data
+- EventHandler<T> is a custom delegate with an EventArgs of type T. Easier than writing your own delegate
 

@@ -1,0 +1,13 @@
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.exe
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.deps.json
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.runtimeconfig.json
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.runtimeconfig.dev.json
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.dll
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.pdb
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.csprojAssemblyReference.cache
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.AssemblyInfoInputs.cache
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.AssemblyInfo.cs
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.csproj.CoreCompileInputs.cache
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.dll
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.pdb
+C:\Data\Code\repos\onegronm\csharp-events\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.genruntimeconfig.cache
