@@ -22,10 +22,7 @@ namespace DelegatesAndEvents
         {
             for (int i = 0; i < hours; i++)
             {
-                // raise event
-                // WorkPerformed(hours, worktype); (not recommended)
-
-                OnWorkedPerformed(hours, worktype);
+                OnWorkedPerformed(i, worktype);
             }
 
             OnWorkCompleted();

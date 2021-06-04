@@ -24,12 +24,25 @@ namespace DelegatesAndEvents
             // DoWork(del1);
 
             Worker worker = new Worker();
+
+            // wire up the event (creating an instance of the delegate and attaching it to an event
+            // data comes along the pipeline and is dumped into the handler method
+            // the += operator is used to attach an event to an event handler
+            // the pipeline (or delegate) is being registered with the WorkedPerformed delegate and added into the invocation list
+            worker.WorkPerformed += new EventHandler<WorkPerformedEventArgs>(WorkedPerformed1);
+            worker.WorkCompleted += new EventHandler(WorkCompleted);
+
             worker.DoWork(10, WorkType.GenerateReports);
         }
 
-        static void WorkedPerformed1(int hours, WorkType worktype)
+        static void WorkCompleted(object sender, EventArgs e)
         {
-            Console.WriteLine("WorkedPerformed1 called " + hours.ToString());
+            Console.WriteLine("Worker is done");
+        }
+
+        static void WorkedPerformed1(object sender, WorkPerformedEventArgs e)
+        {
+            Console.WriteLine("WorkedPerformed1 called " + e.Hours.ToString() + " " + e.WorkType);
         }
 
         static void WorkedPerformed2(int hours, WorkType worktype)
