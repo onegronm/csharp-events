@@ -39,3 +39,9 @@ static void WorkCompleted(object sender, EventArgs e)
 - Standard way in .NET to send events and data
 - EventHandler<T> is a custom delegate with an EventArgs of type T. Easier than writing your own delegate
 
+```csharp
+static void WorkCompleted(object sender, EventArgs e)
+{
+    Console.WriteLine("Worker is done");
+}
+```
