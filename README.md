@@ -43,6 +43,7 @@ static void WorkCompleted(object sender, EventArgs e)
 ```csharp
 void Main()
 {
+    var worker = new Worker();
     worker.WorkPerformed += Worker_WorkPerformed;
 }
     
@@ -51,4 +52,12 @@ private static void Worker_WorkPerformed(object sender, WorkPerformedEventArgs e
     // ...
 }
 ```
-    
+
+## Anonymous methods
+Anonymous methods allow event handler code to be hooked directly to an invent. Anonymous methods are defined using the delegate keyword
+```csharp
+worker.workedPerformed += delegate(object sender, EventArgs e)
+{
+    // ...
+}
+```
