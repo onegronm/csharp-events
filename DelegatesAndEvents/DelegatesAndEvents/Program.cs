@@ -33,6 +33,25 @@ namespace DelegatesAndEvents
             worker.WorkCompleted += new EventHandler(WorkCompleted);
 
             worker.DoWork(10, WorkType.GenerateReports);
+
+            /*** Delegate Inference ***/
+            // instead of...
+            // worker.WorkPerformed += new EventHandler<WorkPerformedEventArgs>(WorkedPerformed1);
+
+            // do this instead by allowing the compiler to infer the delegate since types are already defined in the worker
+            // type "+=" then double tab
+            worker.WorkPerformed += Worker_WorkPerformed;
+
+            /*** Anonymous methods ***/
+            worker.WorkPerformed += delegate (object sender, WorkPerformedEventArgs e)
+            {
+                Console.WriteLine("Anonymous method.");
+            };
+        }
+
+        private static void Worker_WorkPerformed(object sender, WorkPerformedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         static void WorkCompleted(object sender, EventArgs e)
