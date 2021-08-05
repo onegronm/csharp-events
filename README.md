@@ -25,7 +25,6 @@ public event EventHandler<T> WorkPerformed;
 - Uses a delegate to route itself to an event listener
 - Events are declared in a class using the `event` keyword
 - Think of it as a wrapper for a delegate
-### Uses
 
 ## Event Handlers
 ```csharp
@@ -61,3 +60,27 @@ worker.workedPerformed += delegate(object sender, EventArgs e)
     // ...
 }
 ```
+
+## Lambda
+- A concise inline method
+
+```csharp
+SubmitButton.Click += (s,e) => MessageBox.Show("Button Clicked");
+```
+
+- ```(s,e)``` Inline method parameters
+- The compiler looks at the delegate behind the event and the types behind its method signature to infer the data types
+- ```=>``` Lambda operator
+- ```MessageBox.Show("Button Clicked");``` Message body
+
+## Delegates in .NET
+The .NET framework provides several different delegates that provide flexible options
+- Built-in to .NET framework
+- Avoids having to write the custom delegate code
+- Handle scenarios that handle one or more input parameters
+- Save typing when working with custom delegates
+- It's a matter of preference. Some people prefer to declare the delegates at the top of the class
+- ```Action<T>``` provides a delegate that accepts a single parameter and returns no value
+- You can pass as many type as you want to ```Action<T>```. For example, ```Action<T1,T2,T3>```
+- ```Func<T,TResult>``` - provides a delegate that accepts a single parameter and a return value of type TResult
+- ```Func<string, bool>``` is equivalent to declaring a delegate that accepts a string and returns a boolean

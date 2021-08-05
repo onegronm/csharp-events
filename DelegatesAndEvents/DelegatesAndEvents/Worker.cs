@@ -5,16 +5,15 @@ using static DelegatesAndEvents.Program;
 
 namespace DelegatesAndEvents
 {
-    // non-standard
-    // public delegate void WorkedPerformedHandler(int hours, WorkType workType);
-    // public delegate void WorkPerformedHandler(object sender, WorkPerformedEventArgs e);
+    // non-standard declaration
+    public delegate void WorkPerformedHandlerWithEventArgs(object sender, WorkPerformedEventArgs e);
+    public delegate void WorkPerformedHandlerWithouEventArgs(int hours, WorkType worktype);
 
     public class Worker
     {
-        // defining two custom events
+        // we can eliminate the delegate altogether using EventHandler<T>
 
-        // we can eliminate the delegate altogether with EventHandler<T>
-        // public event WorkPerformedHandler WorkPerformed;
+        // let's define two custom events
         public event EventHandler<WorkPerformedEventArgs> WorkPerformed;
         public event EventHandler WorkCompleted;
 
@@ -35,17 +34,17 @@ namespace DelegatesAndEvents
         /// <param name="worktype"></param>
         protected virtual void OnWorkedPerformed(int hours, WorkType worktype)
         {
-            // access underlying delegate from the event
+            // method 1: access underlying delegate from the event
             // WorkedPerformedHandler del = WorkPerformed as WorkedPerformedHandler;
             // if (del != null) // listeners are attached
             // {
             //     del(hours, worktype); // raise event
             // }
 
-            // or invoke the event directly ...
-
+            // method 2: invoke the event directly
             if (WorkPerformed != null)
             {
+                // raise the event
                 WorkPerformed(this, new WorkPerformedEventArgs(hours, worktype));
             }
         }
